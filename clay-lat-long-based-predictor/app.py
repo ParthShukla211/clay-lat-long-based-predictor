@@ -23,7 +23,7 @@ GPS_LONG = st.number_input('GPS_LONG')
 
 
 # 'pH(CaCl2)':[pH(CaCl2)],'pH(H2O)':[pH(H2O)],
-if st.button('Predict Clay'):
+if st.button('Predict'):
       input=pd.DataFrame({'coarse':[coarse],'pH_in_H2O':[pH_in_H2O],'pH_in_CaCl2':[pH_in_CaCl2],'OC':[OC],'CaCO3':[CaCO3],'N':[N],'P':[P],'K':[K],'CEC':[CEC],'GPS_LAT':[GPS_LAT],'GPS_LONG':[GPS_LONG]})
       result = pipe.predict(input)
       st.success('THE CLAY FOR GIVEN DATA WILL BE {}'.format(result))
